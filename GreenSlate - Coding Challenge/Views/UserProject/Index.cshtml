@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "GreenSlate - Coding Challenge";
+    Layout = null;
+}
+<div class="row">
+    <div class="col-12">
+        <div class="form-group d-flex justify-content-center">
+            <select class="form-control" id="slcUsers">
+                <option value="">--</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="row d-flex justify-content-center ">
+    <div class="col-10" id="divUserProjectsGrid">
+        <table class="table .table-bordered justify-content-center">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Project Id</th>
+                    <th scope="col">Start Date</th>
+                    <th scope="col">Time To Start</th>
+                    <th scope="col">End Date</th>
+                    <th scope="col">Credit</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+@Scripts.Render("~/bundles/userProjects")

@@ -1,0 +1,34 @@
+﻿@model IEnumerable<CodingChallenge.Models.UserProject>
+@{
+    Layout = null;
+}
+@helper getTimeToStart(double diff)
+{
+    if (diff < 1)
+    {
+        <td>Started</td>
+    }
+    else
+    {
+        <td>@Convert.ToInt32(diff)</td>
+    }
+}
+@foreach (var item in Model)
+{
+    <tr>
+        <td scope="row">@item.ProjectId</td>
+        <td>@item.Project.StartDate</td>
+        @(getTimeToStart((item.Project.StartDate - item.AssignedDate).TotalDays))
+        <td>@item.Project.EndDate</td>
+        <td>$@item.Project.Credits</td>
+        @if (item.IsActive)
+        {
+            <td>Active</td>
+        }
+        else
+        {
+            <td>Inactive</td>
+
+        }
+    </tr>
+}
