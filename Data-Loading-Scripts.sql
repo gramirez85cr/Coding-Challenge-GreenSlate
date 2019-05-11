@@ -1,3 +1,5 @@
+USE [CodingChallengeGRS]
+
 INSERT [dbo].[Projects]([StartDate], [EndDate], [Credits])
 VALUES ('5/14/2018 10:30:00 AM', '1/30/2019 6:00:00 PM', 5000)
 
